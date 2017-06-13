@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+  <meta name="author" content="shwetank">
+  <title>Modeling Wireless Network Base Stations </title>
+
+  <!-- CSS  -->
+  <link href="./spatial_files/icon" rel="stylesheet">
+  <link href="./spatial_files/materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href="./spatial_files/style.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href="./spatial_files/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="./spatial_files/jquery-1.12.4.min.js.download"></script></head>
+<body id = "page-top">
+  
+  <div class="navbar-fixed">
+
+    <nav class="grey darken-4" role="navigation">
+      <div class="nav-wrapper container"><a id="logo-container" href="https://shwetank3.github.io" class="brand-logo"></a>
+        <ul class="left hide-on-med-and-down">
+          <li><a class="nav-item waves-effect waves-light active" href="https://shwetank3.github.io/spatial#page-top">Home</a></li>
+          <li><a class="nav-item waves-effect waves-light" href="https://shwetank3.github.io/spatial#abstract">Abstract</a></li>
+          <li><a class="nav-item waves-effect waves-light" href="https://shwetank3.github.io/spatial#input">Input Data</a></li>
+          <li><a class="nav-item waves-effect waves-light" href="https://shwetank3.github.io/spatial#procedure">Procedure</a></li>
+          <li><a class="nav-item waves-effect waves-light" href="https://shwetank3.github.io/spatial#results">Results</a></li>
+          <li><a class="nav-item waves-effect waves-light" href="https://shwetank3.github.io/spatial#reference">Reference</a></li>
+        </ul>
+
+        <a href="https://shwetank3.github.io/" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+  </div>
+  
+
+
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container scrollspy" id="home">
+
+      <h4 class="header center black-text">Modeling Wireless Network Base Stations</h4>
+
+      <br>
+
+      <div class="row center">
+        <h5 class="header col m6 s12">
+          <div class="author"><a href="http://shwetank3.github.io/" target="blank">Shwetank Sonal</a></div>
+          <div class="school"><a href="http://www.vt.edu/" target="blank">Virginia Tech, VA</a></div>
+        </h5>
+
+        <h5 class="header col m6 s12">
+          <div class="author"><a href="https://www.linkedin.com/in/chiranjib-saha-486151a1/" target="blank">Chiranjib Saha</a></div>
+          <div class="school"><a href="http://www.vt.edu/" target="blank">Virginia Tech</a></div>
+        </h5>
+
+    </div>
+  </div>
+
+
+  <div class="container">
+
+    <div class="section">
+
+      <!--
+      <div class="row center">
+        <div class="col s12">
+          <img class="responsive-img" src="images/teaser.jpg">
+        </div>
+      </div>
+       -->   
+	  <div class="col s6 center">
+        <img class="responsive-img" src="./spatial_files/top.png">
+      </div>
+
+    </div>
+
+    <br>
+
+    <div class="row section scrollspy" id="abstract">
+      <div class="title">Abstract</div>
+      Modeling the location of cellular Base Stations(BS) have two fundamental directions. Traditionally, BS sites  
+	  have been modeled by hexagonal grid-based topology. But in reality, BS deployments are irregular and random depending
+	  on planning, opportunistic placement and many other topological and demographic factors. Hence, 
+	  random spatial models have become increasingly popular for the abstration of the BS distributions.Using the
+	  tools from stochastic geometry, it is possible to analytically evaluate the key performance metrics such as 
+	  coverage (outage) probability and data rate. In most works, locations of the BSs are modeled as homogeneous Poisson point process (PPP).
+      Although PPP provides tractable results, it is simple and idealized model as the locations of the BSs are assumed to be 
+      mutually independent. However, in reality macro BSs are installed after a certain distance and thus the neighbouring nodes in the underlying point process
+      should have some "repulsion".	
+     <p> On the other hand, more small cell BSs are deployed to serve the users in densly populated areas with high capacity demand. Hence, the small cell distribution 
+	 has a clustering nature which is correlated to the user distribution. With recent proposal of Strauss and Geyer Saturation process which are two variant of Gibbs process
+	 to model replusive and clustering patterns of BS deployments. The project, investigates the applicability of these proposed point process by testing in a
+	 contemporary released BS site-map of London.
+     </p>	 
+    </div>
+
+    <br>
+
+    <div class="row section scrollspy" id="input">
+
+      <div class="title">Input Data</div>
+      <br>
+      
+      <div class="col s12 center">
+        <img class="responsive-img" src="./spatial_files/try1.png">
+      </div>
+	  <br>
+	  <br>
+
+	  <div class="col s12 center">
+        <img class="responsive-img" src="./spatial_files/input2.png">
+      </div>
+    </div>
+
+    <br>
+
+    <div class="row section scrollspy" id="procedure">
+      <div class="title">Procedure</div>
+        •	Choose a specific area of London and generate 2D coordinates of the BS locations of different mobile operators like Airwave, Orange from the dataset.<br>
+		•	Fit the Strauss and Geyer saturation process using spatstat package in R.<br>
+		•	Generate realizations of the point patterns with the parameter values obtained from the fitting. <br>
+		•	Test the hypothesis that the deployments of the BSs are realizations of either of two poisson processes using metrices like F-function,G-function<br>
+	 </div>
+
+
+    <div class="section row scrollspy" id="results">
+      <div class="title">Results</div>
+      <ul>
+	  <li>For BS deployment exhibiting inhibition, PPP is a good fit. But, Strauss process exhibits better fitness. </li>
+	  <li>For BS deployment with clustering, Geyer saturation process has better fitting to the data compared to PPP. </li>
+	  </ul>
+      <div class="row center">
+        <div class="subtitle"><a>Airwave Base Stations</a></div>
+        <div class="col s12">
+          <a><img class="responsive-img" src="./spatial_files/Airwave.png"></a>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="row center">
+        <div class="subtitle"><a>Comparison using F-Function</a></div>
+        <div class="col s12">
+          <a><img class="responsive-img" src="./spatial_files/f_func_airwave.png"></a>
+        </div>
+      </div>
+	  <div class="row center">
+        <div class="subtitle"><a>Comparison using G-Function</a></div>
+        <div class="col s12">
+          <a><img class="responsive-img" src="./spatial_files/g_func_airwave.png"></a>
+        </div>
+      </div>
+	  
+	  <br>
+	  
+	  <div class="row center">
+        <div class="subtitle"><a>Orange Base Stations</a></div>
+        <div class="col s12">
+          <a><img class="responsive-img" src="./spatial_files/orange.png"></a>
+        </div>
+      </div>
+
+      <br>
+	  
+	  <div class="row center">
+        <div class="subtitle"><a>Comparison using F-Function</a></div>
+        <div class="col s12">
+          <a><img class="responsive-img" src="./spatial_files/f_func_orange.png"></a>
+        </div>
+      </div>
+    
+	  <br>
+	  
+	  <div class="row center">
+        <div class="subtitle"><a>Comparison using G-Function</a></div>
+        <div class="col s12">
+          <a><img class="responsive-img" src="./spatial_files/g_func_orange.png"></a>
+        </div>
+      </div>
+    </div>
+	
+
+
+    <div class="row section scrollspy" id="reference">
+      <div class="title">Reference</div>
+      <ul>
+        <li>• J. Andrews, F. Baccelli, and R. Ganti, "A tractable approach to coverage and rate in cellular networks," IEEE Transactions on Communications, vol. 59, no. 11, pp. 3122-3134, Nov.2011.</li>
+        <li>• H. ElSawy, E. Hossain, and M. Haenggi, "Stochastic geometry for modeling, analysis, and design of multi-tier and cognitive cellular wireless networks: A survey," IEEE Communications Surveys and Tutorials, vol. 15, no. 3, pp. 996-1019, 2013.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <footer class="page-footer grey lighten-3">  
+    <div class="footer-copyright center black-text">
+      Copyright © Shwetank Sonal 2017
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="./spatial_files/jquery-2.1.1.min.js.download"></script>
+  <script src="./spatial_files/materialize.js.download"></script>
+  <script src="./spatial_files/init.js.download"></script>
+
+  
+
+<div class="hiddendiv common"></div><div class="drag-target" style="left: 0px; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div><div class="jvectormap-tip"></div></div><div class="drag-target" style="left: 0px; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div></body></html>
