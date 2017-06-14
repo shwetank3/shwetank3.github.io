@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+  <meta name="author" content="shwetank">
+  <title>Exponential of Real World Network</title>
+
+  <!-- CSS  -->
+  <link href="./graph_files/icon" rel="stylesheet">
+  <link href="./graph_files/materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href="./graph_files/style.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href="./graph_files/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="./graph_files/jquery-1.12.4.min.js.download"></script></head>
+<body id="page-top">
+  
+  <div class="navbar-fixed">
+
+    <nav class="grey darken-4" role="navigation">
+      <div class="nav-wrapper container"><a id="logo-container" href="https://shwetank3.github.io/" class="brand-logo"></a>
+        <ul class="left hide-on-med-and-down">
+          <li><a class="nav-item waves-effect waves-light active" href="https://shwetank3.github.io/graph#page-top">Home</a></li>
+          <li><a class="nav-item waves-effect waves-light" href="https://shwetank3.github.io/graph#abstract">Abstract</a></li>
+          <li><a class="nav-item waves-effect waves-light" href="https://shwetank3.github.io/graph#background">Background</a></li>
+          <li><a class="nav-item waves-effect waves-light" href="https://shwetank3.github.io/graph#procedure">Procedure</a></li>
+          <li><a class="nav-item waves-effect waves-light" href="https://shwetank3.github.io/graph#results">Results</a></li>
+          <li><a class="nav-item waves-effect waves-light" href="https://shwetank3.github.io/graph#reference">Reference</a></li>
+        </ul>
+
+        <a href="https://shwetank3.github.io/" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+  </div>
+  
+
+
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container scrollspy" id="home">
+
+      <h4 class="header center black-text">Exponential of Real World Network</h4>
+
+      <br>
+
+      <div class="row center">
+        <h5 class="header col m4 s12">
+          <div class="author"><a href="http://shwetank3.github.io/" target="blank">Shwetank Sonal</a></div>
+          <div class="school"><a href="http://www.vt.edu/" target="blank">Virginia Tech, VA</a></div>
+        </h5>
+
+        <h5 class="header col m4 s12">
+          <div class="author"><a href="https://www.linkedin.com/in/himanshu-bedi-a985b465/" target="blank">Himanshu Bedi</a></div>
+          <div class="school"><a href="http://www.vt.edu/" target="blank">Virginia Tech</a></div>
+        </h5>
+		
+		<h5 class="header col m4 s12">
+          <div class="author"><a href="https://www.linkedin.com/in/pavanbv/" target="blank">Pavan Kumar Bellam</a></div>
+          <div class="school"><a href="http://www.vt.edu/" target="blank">Virginia Tech</a></div>
+        </h5>
+
+    </div>
+  </div>
+
+
+  <div class="container">
+
+    <div class="section">
+
+      <!--
+      <div class="row center">
+        <div class="col s12">
+          <img class="responsive-img" src="images/teaser.jpg">
+        </div>
+      </div>
+       -->   
+	  <div class="col s6 center">
+        <img class="responsive-img" src="./graph_files/properties.png">
+      </div>
+
+    </div>
+
+    <br>
+
+    <div class="row section scrollspy" id="abstract">
+      <div class="title">Abstract</div>
+      With expanding social networks and large online social data, large graphical representations of useful data are getting prevalent. 
+	  A lot of graph mining tasks exist which when run on graphs extract useful information. But with the growing graph size, issues like
+	  scalability and computational cost of these tasks arise. So, here in this project we explore usefulness of exponential of graph 
+	  matrices to observe any interesting properties. Here, we explore Eigen Vector  decomposition properties on exponential matrix. 
+	  In addition, several important mathematical properties relevant to graph mining which can be modelled using exponential of a matrix
+	  have been discussed. Specifically, we aim at improving Clustering and Link Prediction algorithms using mathematical intuition 
+	  obtained from exponential of a matrix. 
+    </div>
+
+    <br>
+
+    <div class="row section scrollspy" id="background">
+
+      <div class="title">Background</div>
+      <br>
+	  <div class="subtitle">Exponential of Matrix</div>
+	  <p>Exponential of a matrix is a matrix function defined on a square matrix. Exponential of a matrix can be computed using power series given by:</p>
+      <div class="col s12 center">
+        <img class="responsive-img" src="./graph_files/exp.png">
+      </div>
+	  <p>For any matrix A, the above power series converges (for matrix with finite norm) and hence exponential of a matrix is well defined. In case of graphs, we represent graph using an n x n adjacency matrix, where n is the number of nodes. Hence, matrix exponential is computed on adjacency matrix.</p>
+
+      <div class="subtitle">Exponential Features</div>
+	  <p>Exponential of a matrix could be used to model certain useful features which can be used in Graph Mining Tasks.</p>
+      
+	  <li>Centrality - Denotes the connectivity of a node in the network. Defined for every node. Denotes the number of closed walks associated to a node.</li>
+      <div class="col s12 center">
+        <img class="responsive-img" src="./graph_files/SC.png">
+      </div>
+	  <br>
+	  <li>Communicability - Denotes the connectivity between two nodes in a graph. Defined for every pair of nodes in the graph. Denotes the number of walks between 2 nodes.</li>
+	  <div class="col s12 center">
+        <img class="responsive-img" src="./graph_files/C.png">
+      </div>
+	  <br>
+	  <li>Betweenness - Quantifies the influence of a particular node in a network. Defined for every node. Computes the effectiveness of the node in information exchange.</li>
+	  <div class="col s12 center">
+        <img class="responsive-img" src="./graph_files/B.png">
+      </div>
+	  <br>
+	  <li>Inbound - Measures the amount of inbound traffic onto a node. Defined for every node. Affectively computes the weighted connectivity of inward edges onto a node.</li>
+	  <div class="col s12 center">
+        <img class="responsive-img" src="./graph_files/I.png">
+      </div>
+	  <br>
+	  <li>Outbound - Measures the amount of outbound traffic from a node. Defined for every node. Affectively computes the weighted connectivity of outward edges from a node.</li>
+	  <div class="col s12 center">
+        <img class="responsive-img" src="./graph_files/O.png">
+      </div>
+	  <br>
+	  <li>Modified Katz Measure - Computes the weighted sum of paths varying lengths between pair of nodes. Defined for every pair of nodes. With weights appropriately chosen, it is similar to communicability between two nodes.</li>
+	  <div class="col s12 center">
+        <img class="responsive-img" src="./graph_files/kat.png">
+      </div>
+	  <br>
+    </div>
+	
+	<div class="subtitle">Eigen Decomposition and Clustering</div>
+	  <li>For a matrix and its exponential, Eigen vectors would remain same while Eigen values in exponential case would be exponentiated values of that in normal matrix. </li>
+      <li>This property could be useful in scenarios where Eigen decomposition is relatively difficult for normal matrices. This is observed in sparse directed matrices. </li>
+      <li>As Eigen vector computation speeds up, a significant impact occurs in spectral clustering performance.</li>
+      <div class="col s12 center">
+        <img class="responsive-img" src="./graph_files/compare_time.png">
+      </div>
+    <br>
+    <div class="subtitle">Link Prediction</div>
+	  <li>Link Prediction is a graph mining task that deals with predicting missing edges and also suggests possible links. </li>
+      <li>For every pair of nodes, certain set of path based and node based features are computed and decision is accordingly taken to predict if an edge exists. </li>
+      <li>Few of the conventional features such as node degrees, Jaccard and Cosine Similarity between nodes based on their neighbors are used. </li>
+      <li>In addition, features derived from exponential such as centrality, communicability, betweenness, inbound, outbound which represent graph connectivity are used.</li>
+
+    <br>
+	  
+	  
+    <div class="row section scrollspy" id="procedure">
+      <div class="title">Procedure</div>
+        Several directed and undirected datasets from SNAP Dataset Collection were used for our experiments.
+		<ol>
+		<li> Data Preprocessing – Adjacency matrix has been constructed out of edge data of graph. </li>
+        <li> Exponential Features – Exponential of the matrix has been computed and features have been extracted for Link Prediction. </li>
+        <li> Training and Test Sets – We have sampled equal number of edge and non-edge node pairs for classification. Further, a 80-20 split is considered to build training and test sets. </li>
+        <li> Classifiers –Various classifiers such as Random Forest, Logistic Regression, Support Vector Machine, and Neural Networks have ben used for Edge Classification task. </li>
+		 </div>
+
+
+    <div class="section row scrollspy" id="results">
+      <div class="title">Results</div>
+	  <li>Eigen Decomposition is faster for exponential matrix in case of Sparse Directed matrix. </li>
+	  <li>Various features derived from exponential of matrix contribute in making link prediction task more accurate. Out of these Katz measure and Outboundness of source node play dominant role in improving link prediction task.</li>
+	  <li>Exponential of matrix computation gets expensive for large matrices making it memory and time intensive. A map-reduce memory intensive method needs to be explored for very large matrices.</li>
+      <br>
+	  <br>
+	  <div class="row center">
+        <div class="col s12">
+          <a><img class="responsive-img" src="./graph_files/norvsexp.png"></a>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="row center">
+        <div class="col s12">
+          <a><img class="responsive-img" src="./graph_files/exp_feat.png"></a>
+        </div>
+      </div>  
+	  
+    </div>
+	
+
+
+    <div class="row section scrollspy" id="reference">
+      <div class="title">Reference</div>
+      <ul>
+        <li>• M. Benzi, E. Estrada, and C. Klymko, "Ranking hubs and authorities using matrix functions," Linear Algebra and its Applications 438, 5(2013), 2447-2474</li>
+        <li>• E. Estrada, and N. Hatano, "Communicability in complex networks," Physical Review E 77, 3(2008), 036111.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <footer class="page-footer grey lighten-3">  
+    <div class="footer-copyright center black-text">
+      Copyright © Shwetank Sonal 2017
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="./graph_files/jquery-2.1.1.min.js.download"></script>
+  <script src="./graph_files/materialize.js.download"></script>
+  <script src="./graph_files/init.js.download"></script>
+
+  
+
+<div class="hiddendiv common"></div><div class="drag-target" style="left: 0px; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div><div class="jvectormap-tip"></div></div><div class="drag-target" style="left: 0px; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div><div class="drag-target" style="left: 0px; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div></body></html>
